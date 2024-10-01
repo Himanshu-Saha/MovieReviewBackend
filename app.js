@@ -2,8 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-const uri ='';
-    // "mongodb+srv://admin:root%40123@projectdb.gd74n.mongodb.net/?retryWrites=true&w=majority&appName=ProjectDb";
+const uri =
+    "mongodb+srv://admin:root%40123@projectdb.gd74n.mongodb.net/?retryWrites=true&w=majority&appName=ProjectDb";
 
 const clientOptions = {
     serverApi: { version: "1", strict: true, deprecationErrors: true },

@@ -12,6 +12,19 @@ exports.getReviews = async (req, res) => {
     return res.send(data);
 };
 
+exports.getReviewsByMovieId = async (req, res) => {
+    const id = req.params.movieId;
+    const data = await Reviews.find({ movieId: id });
+
+    if (!data) {
+        return res.status(404).json({
+            detail: "No data found",
+        });
+    }
+
+    return res.send(data);
+};
+
 exports.createReview = async (req, res) => {
     if (!req.body.movieId || !req.body.rating) {
         return res.status(206).json({
